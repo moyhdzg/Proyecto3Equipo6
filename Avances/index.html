@@ -13,45 +13,44 @@
     <h1>Dash Crypto currency</h1>
     <div class="base">
         <div id="Best">
-            <div  class="botones">
-                <img id="img1" src="" alt=""><p id="Crypto1"></p><p id="value1"></p>
+            <div class="botones">
+                <img id="img1" src="" alt="">
+                <p id="Crypto1"></p>
+                <p id="value1"></p>
             </div>
             <div class="botones">
-                <img id="img2" src="" alt=""><p id="Crypto2" > </p><p id="value2"></p>
+                <img id="img2" src="" alt="">
+                <p id="Crypto2"> </p>
+                <p id="value2"></p>
             </div>
             <div class="botones">
-                <img id="img3" src="" alt=""><p id="Crypto3"> </p><p id="value3"></p>
+                <img id="img3" src="" alt="">
+                <p id="Crypto3"> </p>
+                <p id="value3"></p>
             </div>
             <div class="botones">
-                <img id="img4" src="" alt=""><p id="Crypto4" ></p><p id="value4"></p>
+                <img id="img4" src="" alt="">
+                <p id="Crypto4"></p>
+                <p id="value4"></p>
             </div>
         </div>
 
         <div id="search">
-            <!-- <label for="crypto">Seleccione la Crypto Moneda con la que desea validar información historica</label>
-            <input type="text" multiple name="crypto" id="crypto" list="drawfcrypto" placeholder="default" />
-            <datalist id="drawfcrypto">
-                <option value="Bitcoin"></option>
-                <option value="litcoin"></option>
-                <option value="Etherum"></option>
-                <option value="Dogecoin"></option>
-            </datalist>
-            <button>Buscador</button>
-            <hr> -->
+
             <div id="Contenedor_busqueda">
                 <div id="container"></div>
-                <button onclick="buscador()">Buscador</button>
-        </div>
-        <span>Fecha iniicial</span>
-        <input type="date" name="Fecha_inicio" id="dateI">
-        <span>Fecha Final</span>
-        <input type="date" name="Fecha_fin" id="dateF">
-        <hr>
+                <button onclick="buscador_label()">Buscador</button>
+            </div>
+            <!-- <span>Fecha iniicial</span>
+            <input type="date" name="Fecha_inicio" id="dateI">
+            <span>Fecha Final</span>
+            <input type="date" name="Fecha_fin" id="dateF"> -->
+            <hr>
             <div class="valores">
                 <div class="values">
                     <p> <b>Valor minimo</b> </p>
 
-                    <span id ="low">$0</span>
+                    <span id="low">$0</span>
                 </div>
 
                 <div class="values">
@@ -61,19 +60,16 @@
 
                 <div class="values">
                     <p><b>Valor maximo</b></p>
-                    <span id ="high">$0</span>
+                    <span id="high">$0</span>
                 </div>
 
             </div>
-
-            <div id="Chart" style="width: 100%; height:100%; display:block;margin:0 auto;">
+            <!-- <div class="Chart" style="width: 100%; height:100%; display:block;margin:0 auto;">
                 <canvas id="myChart1"></canvas>
                 <br>
-            </div>
+            </div> -->
         </div>
-
-        <div id="Chart" style="width: 100%; height:100%; display:block;margin:0 auto;">
-            <!-- <h4>Gráfico de barras</h4> -->
+        <div class="Chart" style="width: 100%; height:100%; display:block;margin:0 auto;">
             <canvas id="myChart"></canvas>
             <br>
         </div>

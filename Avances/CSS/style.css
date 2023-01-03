@@ -1,5 +1,7 @@
 body {
     padding: 20px 60px 10px 50px;
+    /* background: #E9ECF4;
+    color: #000; */
 }
 
 h1 {
@@ -37,7 +39,7 @@ align-content: space-around;
     grid-row: 1;
 }
 
-#Chart {
+.Chart {
     grid-row: 2;
     grid-column: 2 / 4;
 }

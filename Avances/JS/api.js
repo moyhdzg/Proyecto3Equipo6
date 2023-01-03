@@ -1,6 +1,5 @@
 endpoint = 'live'
-// access_key = '043f8200094733bafff499fd2cbd6720';
-// access_key = '22da5cfe10378b0687afc05a790bd0a6';
+access_key = '043f8200094733bafff499fd2cbd6720';
 
 function api_conect() {
     const options = {
@@ -67,30 +66,32 @@ function arrays_symbol_url(array_top) {
 //###################################
 
 
-function list_select(objeto2){
-    $(document).ready(function() {
+function list_select(objeto2) {
+    $(document).ready(function () {
         var name_full = Object.keys(objeto2).map(function (_) { return objeto2[_]; });
-        var name_list = name_full.map(function (element) {return element.name_full})
-        
-      var select = $('<select>').prop('id', 'Crypto_list').prop('name', 'Crypto');
-      $(name_list).each(function() {
-        select.append($("<option>")
-        .prop('value', this)
-        .text(this.charAt(0).toUpperCase() + this.slice(1)));
-      });
-      
-      var label = $("<label>").prop('for', 'Crypto')
-                    .text("Seleccione una Crypto Moneda: ");
-      var br = $("<br>");
-      $('#container').append(label).append(select).append(br);
-      });
+        var name_list = name_full.map(function (element) { return element.name_full })
+
+        var select = $('<select>').prop('id', 'Crypto_list').prop('name', 'Crypto');
+        $(name_list).each(function () {
+            select.append($("<option>")
+                .prop('value', this)
+                .text(this.charAt(0).toUpperCase() + this.slice(1)));
+        });
+
+        var label = $("<label>").prop('for', 'Crypto')
+            .text("Seleccione una Crypto Moneda: ");
+        var br = $("<br>");
+        $('#container').append(label).append(select).append(br);
+    });
 }
 
-function buscador() {
+function buscador_label() {
+
+// Busca los valores para colocar en las etiquetas SPAM y rellenar la información de valores minimos,actua y maximo en función de la crypto seleccionada
     const options = {
         method: 'GET',
     };
-    fetch('http://api.coinlayer.com/api/' + endpoint + '?access_key=' + access_key+'&expand=1', options)
+    fetch('http://api.coinlayer.com/api/' + endpoint + '?access_key=' + access_key + '&expand=1', options)
         .then(response => response.json())
         .then(response => {
             objeto3 = response.rates;
@@ -101,9 +102,28 @@ function buscador() {
             document.getElementById("high").innerHTML = `$${objeto3[match[1]].high}`
             document.getElementById("low").innerHTML = `$${objeto3[match[1]].low}`
             document.getElementById("rates").innerHTML = `$${objeto3[match[1]].rate}`
+            // Time_Frame_Data(match)
 
         })
         .catch(err => console.error(err));
 }
+
+// function Time_Frame_Data(Symbol){
+// // Realiaza una petición a la API para proceder con la consulta de los datos historicos
+// var Fecha_Inicial = document.getElementById("dateI").value;
+// var Fecha_Final = document.getElementById("dateF").value;
+// const options = {
+//     method: 'GET',
+// };
+// fetch(`http://api.coinlayer.com/api/timeframe?access_key=${access_key}&start_date=${Fecha_Inicial}&end_date=${Fecha_Final}&symbols=${Symbol[1]}`, options)
+//     .then(response => response.json())
+//     .then(response => {
+//         objeto4 = response.rates;
+//         console.log(`http://api.coinlayer.com/api/timeframe?access_key=${access_key}&start_date=${Fecha_Inicial}&end_date=${Fecha_Final}&symbols=${Symbol[1]}`)
+// console.log(objeto4)
+//     })
+//     .catch(err => console.error(err));
+
+// }
 
 api_conect()
