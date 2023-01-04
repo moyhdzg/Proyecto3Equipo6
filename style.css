@@ -36,6 +36,36 @@ body{
     justify-content: space-between;
     grid-area: buscador;
 }
+
+.buscar{ /* Inicio Agregado por Angel Guzman*/
+  color: #318aac !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: rgba(0,0,0,0);
+  border: 2px solid;
+  border-color: #318aac;
+  transition: all 1s ease;
+  position: relative;
+}
+.buscar:hover {
+  background: #318aac;
+  color: #fff !important;
+}
+
+.crypto-search{
+   background: white;
+   border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: white;
+   font-size: 12px;
+   padding: 5px;
+   width: 50%;
+   height: 200%;
+}
+
+/* Final de aportación de Angel Guzman*/
+
 .crypto-container{
     /* grid-row-start: 1;
     grid-column-start: 1;
