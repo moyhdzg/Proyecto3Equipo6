@@ -1,6 +1,7 @@
 endpoint = 'live'
 // access_key = '043f8200094733bafff499fd2cbd6720';
-// access_key = '0GGRR3565'
+//access_key = '0GGRR3565'
+
 function api_conect() {
     const options = {
         method: 'GET',
