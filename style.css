@@ -1,3 +1,4 @@
+
 /* * {
     margin: 0;
     padding: 0;
@@ -9,12 +10,15 @@
     padding:0;
 }
 
-body{
+
+.body {
     background: #E9ECF4;
     color: #000;
 }
 
-.wrapper{
+
+
+.wrapper {
     width: 90%;
     max-width: 1280px;
     margin: 15px auto;
@@ -28,10 +32,9 @@ body{
         "footer footer";
 }
 
-
-.wrapper > div,
-.header, .footer, 
-.main,
+.wrapper>div,
+.header,
+.footer,
 .crypto-container,
 .buscador {
     background-color: white;
@@ -39,8 +42,9 @@ body{
     border-radius: 4px;
 }
 
-.buscador{
-    display:flex;
+
+.buscador {
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -78,16 +82,6 @@ body{
 
 /* Final de aportación de Angel Guzman*/
 
-.crypto-container {
-    /* grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row: span 2;     */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    grid-area: container;
-}
 
 
 /* .crypto-1, .crypto-2, .crypto-3, .crypto-4 {
@@ -192,11 +186,4 @@ body{
         width: 32px;
     }
 
-}
-.footer{
-    background-color:#12203e;
-    color:#fff;
-    /* grid-column-start:1;
-    grid-column-end:3; */
-    grid-area:footer;
 }
