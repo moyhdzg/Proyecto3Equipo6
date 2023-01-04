@@ -1,0 +1,84 @@
+<<<<<<< Updated upstream
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Equipo 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/JS/jquery.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header" id="header">HEADER</header>
+        <aside class="crypto-container" id="crypto-container">
+
+            <div class="botones" id="crypto-1">
+                <img id="img1" src="" alt="">
+                <p id="Crypto1"></p>
+                <p id="value1"></p>
+            </div>
+
+            <div class="botones" id="crypto-2">
+                <img id="img2" src="" alt="">
+                <p id="Crypto2"></p>
+                <p id="value2"></p>
+            </div>
+
+            <div class="botones" id="crypto-3">
+                <img id="img3" src="" alt="">
+                <p id="Crypto3"> </p>
+                <p id="value3"></p>
+            </div>
+
+            <div class="botones" id="crypto-4">
+                <img id="img4" src="" alt="">
+                <p id="Crypto4"></p>
+                <p id="value4"></p>
+            </div>
+        </aside>
+
+        <div class="buscador" id="buscador">
+            <div id="Contenedor_busqueda">
+                <div id="container"></div>
+                <!-- <input type="text" class="crypto-search" id="crypto-search"> -->
+                <button class="buscar" id="buscar" onclick="buscador_label()">Buscar Crypto</button>
+            </div>
+
+            <hr>
+            <div class="values-container">
+                <div class="values">
+                    <p><b>Valor minimo</b></p>
+                    <span id="low">$0</span>
+                </div>
+
+                <div class="values">
+                    <p><b>Valor actual</b></p>
+                    <span id="rates">$0</span>
+                </div>
+
+                <div class="values">
+                    <p><b>Valor maximo</b></p>
+                    <span id="high">$0</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dashboard-container" id="dashboard-container">
+            <canvas class="crypto-Chart" id="crypto-Chart"></canvas>
+
+        </div>
+        <footer class="footer" id="footer">FOOTER</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/JS/index.js" type="text/javascript"></script>
+    <script src="/JS/api.js" type="text/javascript"></script>
+</body>
+
+</html>
+>>>>>>> Stashed changes
