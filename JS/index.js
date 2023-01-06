@@ -16,7 +16,8 @@
 
     var ctx = document.getElementById('crypto-Chart').getContext('2d');
     var chart2 = new Chart(ctx, {
-        type: 'bar',
+        //type: 'bar',
+        type: 'line', /* anteriormente tenia bar revisar si les parece bien utilizar esta*/
         data: {
             labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
             datasets: [{
