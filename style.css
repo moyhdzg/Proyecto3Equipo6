@@ -137,6 +137,11 @@ body {
     width: 48px;
 }
 
+/* Aportación Angel Guzman, en caso de no ser necesario quitar compañeros*/
+.botones:hover {
+    background: #318aac;
+    color: #fff !important;
+}
 .values-container {
     display: flex;
     justify-content: space-between;
