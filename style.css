@@ -1,0 +1,194 @@
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+
+/* *{
+    margin:0;
+    padding:0;
+} */
+
+
+.body {
+    background: #E9ECF4;
+    color: #000;
+}
+
+
+
+.wrapper {
+    width: 90%;
+    max-width: 1280px;
+    margin: 15px auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header"
+        "container buscador"
+        "container dashboard"
+        "footer footer";
+}
+
+.wrapper>div,
+.header,
+.footer,
+.crypto-container,
+.buscador {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+
+.buscador {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: buscador;
+}
+
+.buscar {
+    /* Inicio Agregado por Angel Guzman*/
+    color: #318aac !important;
+    /* font-size: 20px; */
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #318aac;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.buscar:hover {
+    background: #318aac;
+    color: #fff !important;
+}
+
+.crypto-search {
+    background: white;
+    border: 1px solid #393939;
+    border-radius: 5px 5px 5px 5px;
+    /* color: white; */
+    font-size: 12px;
+    padding: 5px;
+    width: 50%;
+    /* height: 200%; */
+}
+
+/* Final de aportación de Angel Guzman*/
+
+
+
+/* .crypto-1, .crypto-2, .crypto-3, .crypto-4 {
+    background-color: aqua;
+} */
+
+.crypto-container{
+    /* grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row: span 2;     */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: container;
+}
+
+.crypto-1, .crypto-2, .crypto-3, .crypto-4 {
+    background-color: aqua;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: Center;
+    grid-area: dashboard;
+}
+
+
+.header {
+    background-color: #12203e;
+    color: #fff;
+    grid-area:dashboard;
+}
+
+
+.header{
+    background-color:#12203e;
+    color:#fff;
+    /* grid-column-start:1;
+    grid-column-end:3; */
+    grid-area: header;
+}
+
+.footer {
+    background-color: #12203e;
+    color: #fff;
+    /* grid-column-start:1;
+    grid-column-end:3; */
+    grid-area: footer;
+}
+
+/* Cambios Andrés */
+.botones {
+    display: flex;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #e0e0e6;
+    box-shadow: 12px 12px 32px #18182a,
+        -12px -12px 32px #424270;
+    height: max-content;
+    text-align: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-content: center;
+    width: 75%
+}
+
+.botones>img {
+    height: 48px;
+    width: 48px;
+}
+
+/* Aportación Angel Guzman, en caso de no ser necesario quitar compañeros*/
+.botones:hover {
+    background: #318aac;
+    color: #fff !important;
+}
+.values-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.values{
+    text-align: center;
+}
+
+#Contenedor_busqueda {
+    display: flex; flex-wrap: wrap;
+    align-content: center;
+}
+/* #Fin de cambios Andrés */
+
+
+@media screen and (max-width:768px) {
+    .wrapper {
+        grid-template-areas: "header header"
+            "container container"
+            "buscador buscador"
+            "dashboard dashboard"
+            "footer footer";
+    }
+    .botones>img {
+        height: 32px;
+        width: 32px;
+    }
+
+}
