@@ -133,10 +133,3 @@ function buscador_label() {
 
 // }
 api_conect()
-
-var select = $('<select>').prop('id', 'Crypto_list').prop('class','crypto-search').prop('name', 'Crypto');
-$(name_list).each(function () {
-    select.append($("<option>")
-        .prop('value', this)
-        .text(this.charAt(0).toUpperCase() + this.slice(1)));
-});
