@@ -171,6 +171,16 @@
     text-align: center;
 }
 
+#Crypto_list
+{align-content: center;
+text-align: center;
+}
+
+#container{
+    align-content: center;
+        text-align: center;
+}
+
 #Contenedor_busqueda {
     display: flex; flex-wrap: wrap;
     align-content: center;

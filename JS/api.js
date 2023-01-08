@@ -1,6 +1,12 @@
-endpoint = 'live'
-// access_key = '043f8200094733bafff499fd2cbd6720';
-//access_key = '0GGRR3565'
+// Global variables
+var endpoint = 'live'
+var top4
+const dataChart = []
+
+//Keys
+// var access_key = '043f8200094733bafff499fd2cbd6720';
+// Coronado Key
+var access_key = '4ebb9839c2b1f3be4c213cee9f6cf2cd'
 
 function api_conect() {
     const options = {
@@ -9,22 +15,20 @@ function api_conect() {
     fetch('http://api.coinlayer.com/api/' + endpoint + '?access_key=' + access_key, options)
         .then(response => response.json())
         .then(response => {
+            //console.log(response)
             arrays_data(response.rates)
         })
-        .catch(err => {
-            console.error(err)
-            // alert("Se exedio el limite de peticiones a la API intenta nuevamente más tarde. \n\nLo siento, esta pagina es de uso educativo por lo que se ecuentra limitada a 100 peticiones al mes.")
-        }
-)
-
-    ;
+        .catch(err => console.error(err));
 }
 
 function arrays_data(objeto1) {
     // Arreglo creado con base al nombre de la moneda
+
     var Crypto_symbol = Object.keys(objeto1);
     // Arreglo creado con base al valor de cada moneda
-    var Value_rates = Object.keys(objeto1).map(function (_) { return objeto1[_]; });
+    var Value_rates = Object.keys(objeto1).map(function (_) {
+        return objeto1[_];
+    });
     //Arreglo creado a partir de una lista entre el nombre y el valor de cada moneda
     var lista = Object.entries(objeto1)
     //Array de objetos donde se enumera cada moneda y su valor 
@@ -38,36 +42,43 @@ function arrays_data(objeto1) {
     // $('#result').html(JSON.stringify(datos));
 
     //varias Formas de entregar el arreglo
-    console.log(datos)
-    console.log(lista);
+    // console.log(datos)
+    // console.log(lista);
 
     //Busca los 4 más altos y guarda la información en arreglos
-    var top4 = datos.sort(function (a, b) { return b.Rates - a.Rates; }).slice(0, 4);
+    top4 = datos.sort(function (a, b) {
+        return b.Rates - a.Rates;
+    }).slice(0, 4);
     arrays_symbol_url(top4)
 }
 
 //Esta función sirve para traer la información del endpoint "list" donde se puede encontrar la información de cada crypto
 //Tales como el nombre completo y la URL
 function arrays_symbol_url(array_top) {
+    var objeto2
     const options = {
         method: 'GET',
     };
     fetch('http://api.coinlayer.com/api/' + 'list' + '?access_key=' + access_key, options)
         .then(response => response.json())
         .then(response => {
-            objeto2 = response.crypto;
 
+            objeto2 = response.crypto;
+            //console.log("Soy objeto 2")
+            //console.log(objeto2)
             array_top.forEach((element, j) => {
-                document.getElementById(`Crypto${j + 1}`, element).innerHTML = `${objeto2[element.Symbol].name_full}`;
+                document.getElementById(`Crypto${j + 1}`, element).innerHTML = `${objeto2[element.Symbol].name}`;
                 document.getElementById(`value${j + 1}`, element).innerHTML = `$${element.Rates}`;
                 document.getElementById(`img${j + 1}`, element).src = `${objeto2[element.Symbol].icon_url}`
             });
             list_select(objeto2)
         })
         .catch(err => console.error(err));
+
+    return objeto2
 }
 
-
+//export let hola = "mundo"
 //  A partir de acá se hacen peticiones a la API para crear los valores del contenedor de busqueda
 //###################################
 //###################################
@@ -75,8 +86,12 @@ function arrays_symbol_url(array_top) {
 
 function list_select(objeto2) {
     $(document).ready(function () {
-        var name_full = Object.keys(objeto2).map(function (_) { return objeto2[_]; });
-        var name_list = name_full.map(function (element) { return element.name_full })
+        var name_full = Object.keys(objeto2).map(function (_) {
+            return objeto2[_];
+        });
+        var name_list = name_full.map(function (element) {
+            return element.name_full
+        })
 
         var select = $('<select>').prop('id', 'Crypto_list').prop('class','crypto-search').prop('name', 'Crypto');
         $(name_list).each(function () {
@@ -93,17 +108,17 @@ function list_select(objeto2) {
 }
 
 function buscador_label() {
-
     // Busca los valores para colocar en las etiquetas SPAM y rellenar la información de valores minimos,actua y maximo en función de la crypto seleccionada
+    console.log("final final")
     const options = {
         method: 'GET',
     };
     fetch('http://api.coinlayer.com/api/' + endpoint + '?access_key=' + access_key + '&expand=1', options)
         .then(response => response.json())
         .then(response => {
-            objeto3 = response.rates;
+            var objeto3 = response.rates;
             var new_title = document.getElementById("Crypto_list").value;
-            exre = /\((.+)\)/
+            var exre = /\((.+)\)/
             const match = new_title.match(exre);
             // console.log(match[1])
             document.getElementById("high").innerHTML = `$${objeto3[match[1]].high}`
@@ -132,4 +147,41 @@ function buscador_label() {
 //     .catch(err => console.error(err));
 
 // }
+
+// Peticion a la API pra adquirir los valores de la grafica 
+// precio actual, precio maximo y precio mas bajo.
+let hola = 'hola mundo'
+
+function highestAndLowestPrice() {
+
+    let principalCriptoCoinsPrices = []
+    let top4Chart = []
+    
+    const options = {
+        method: 'GET',
+    };
+    return new Promise((res, rej) => {
+        fetch(`http://api.coinlayer.com/live?access_key=${access_key}&expand=1`, options)
+        .then(response => response.json())
+        .then(response => {
+            for (let index = 0; index < top4.length; index++) {
+                let criptoCoin = top4[index].Symbol
+                principalCriptoCoinsPrices.push(response.rates[criptoCoin])
+
+            }
+
+            dataChart.push(principalCriptoCoinsPrices)
+            dataChart.push(top4)
+            res(dataChart)
+        })
+        .catch(err => console.error(err));
+    })   
+}
+
 api_conect()
+
+export {
+    highestAndLowestPrice,buscador_label,
+    dataChart
+}
+// highestAndLowestPrice()
