@@ -13,12 +13,6 @@
 
 /* Estilos del nav */
 
-@media screen and (max-width : 767px) {
-
-    header>nav a>img {
-        display: none;
-    }
-}
 
 /* fin de estilos del nav */
 
@@ -106,6 +100,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    align-content: space-around;
     justify-content: space-between;
     grid-area: container;
 }
@@ -195,7 +190,7 @@ text-align: center;
 #Contenedor_busqueda {
     display: flex; 
     flex-wrap: wrap;
-    align-content: center;
+    align-content: center;    justify-content: center;
 }
 /* #Fin de cambios Andrés */
 
@@ -211,6 +206,16 @@ text-align: center;
     .botones>img {
         height: 32px;
         width: 32px;
+    }
+
+    header>nav a>img {
+        display: none;
+    }
+
+    .crypto-container{
+        /* display:flex; */
+gap: 15px;
+
     }
 
 }
