@@ -11,6 +11,17 @@
 } */
 
 
+/* Estilos del nav */
+
+@media screen and (max-width : 767px) {
+
+    header>nav a>img {
+        display: none;
+    }
+}
+
+/* fin de estilos del nav */
+
 .body {
     background: #E9ECF4;
     color: #000;
@@ -19,8 +30,8 @@
 
 
 .wrapper {
-    width: 90%;
-    max-width: 1280px;
+    width: 100%;
+    /* max-width: 1280px; */
     margin: 15px auto;
     display: grid;
     gap: 10px;
@@ -182,7 +193,8 @@ text-align: center;
 }
 
 #Contenedor_busqueda {
-    display: flex; flex-wrap: wrap;
+    display: flex; 
+    flex-wrap: wrap;
     align-content: center;
 }
 /* #Fin de cambios Andrés */

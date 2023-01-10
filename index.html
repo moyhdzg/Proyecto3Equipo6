@@ -6,19 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Equipo 6</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/bootstrap.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <script type="text/javascript" src="/JS/jquery.js"></script>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://reverent-banach-cb9630.netlify.app/logo-ucamp-dark.png" alt="..." height="36">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Tablero de Datos</a>
+                            <a href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Equipo 6 Proyecto No. 3: Desarrollo de Software</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
     <div class="wrapper">
-        <header class="header" id="header">HEADER</header>
+
         <aside class="crypto-container" id="crypto-container">
 
             <div class="botones" id="crypto-1">
                 <img id="img1" src="" alt="">
-                <p id="Crypto1"></p>
-                <p id="value1"></p>
+                <p id="Crypto1">aaaa</p>
+                <p id="value1">aaffeff</p>
             </div>
 
             <div class="botones" id="crypto-2">
@@ -43,6 +67,7 @@
         <div class="buscador" id="buscador">
             <div id="Contenedor_busqueda">
                 <div id="container"></div>
+
                 <!-- <input type="text" class="crypto-search" id="crypto-search"> -->
                 <button class="buscar" id="buscar">Buscar Crypto</button>
             </div>
@@ -71,15 +96,68 @@
             <canvas class="crypto-Chart" id="crypto-Chart"></canvas>
 
         </div>
-        <footer class="footer" id="footer">FOOTER</footer>
     </div>
+
+    <footer class="footer bg-dark text-center text-white" id="footer">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="#!"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="/JS/index.js"></script>
 
     <script type="module">
         import { buscador_label } from '/JS/api.js'
-        document.querySelector('#buscar1').addEventListener('click', buscador_label)
+        document.querySelector('#buscar').addEventListener('click', buscador_label)
     </script>
 
 

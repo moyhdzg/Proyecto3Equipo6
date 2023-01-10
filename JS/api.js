@@ -4,9 +4,9 @@ var top4
 const dataChart = []
 
 //Keys
-// var access_key = '043f8200094733bafff499fd2cbd6720';
+var access_key = '336f40bb2a62e834e6b886ceafedf09d';
 // Coronado Key
-var access_key = '4ebb9839c2b1f3be4c213cee9f6cf2cd'
+// var access_key = '4ebb9839c2b1f3be4c213cee9f6cf2cd'
 
 function api_conect() {
     const options = {
