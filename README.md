@@ -19,5 +19,5 @@ Pasos:
 2. Ir a configuración de sitio
    ![Ir a Contenido de Sitio](IraContenido.JPG)
 3. Permitir contenido no seguro
-   ![Permitir Contenido Inseguro](PermitirContenido.JPG)
+   ![Permitir Contenido Inseguro](PermitrContenido.JPG)
 4. Actualizar o volver acceder a Página de deployment.
