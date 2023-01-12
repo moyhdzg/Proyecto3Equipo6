@@ -2,7 +2,7 @@
 
 ### Equipo 6
 
-Miembros
+**Miembros**
 
 1. Angel Guzmán
 2. Coronado Hernández
@@ -11,8 +11,8 @@ Miembros
 
 Página de Deployment: [Dashboard Equipo 6](https://aesthetic-buttercream-14a564.netlify.app/)
 
-=Nota: Para visualizar correctamente el deployment, es necesario permitir el acceso a conetnido inseguro =
-Pasos:
+==Nota: Para visualizar correctamente el deployment, es necesario permitir el acceso a conetnido inseguro ==
+**Pasos:**
 
 1. Acceder a menú de explorador
    ![Acceso a Configuración](AccesoConfiguracion.JPG)
