@@ -5,7 +5,7 @@
 **Miembros**
 
 1. Angel Guzmán
-2. Coronado Hernández
+2. Adrián Coronado Hernández
 3. Andrés Felipe Hernández
 4. Moisés A. Hernández García
 
