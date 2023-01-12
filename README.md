@@ -12,6 +12,7 @@
 Página de Deployment: [Dashboard Equipo 6](https://aesthetic-buttercream-14a564.netlify.app/)
 
 ==Nota: Para visualizar correctamente el deployment, es necesario permitir el acceso a conetnido inseguro ==
+
 **Pasos:**
 
 1. Acceder a menú de explorador
