@@ -1,6 +1,6 @@
-### Proyecto 3 ' Dashboard App
+## Proyecto 3 Dashboard App
 
-## Equipo 6
+### Equipo 6
 
 Miembros
 
@@ -9,7 +9,7 @@ Miembros
 3. Andrés Felipe Hernández
 4. Moisés A. Hernández García
 
-Página de Deployment: [Dashboard Equipo 6](https://aesthetic-buttercream-14a564.netlify.app)
+Página de Deployment: [Dashboard Equipo 6](https://aesthetic-buttercream-14a564.netlify.app/)
 
 =Nota: Para visualizar correctamente el deployment, es necesario permitir el acceso a conetnido inseguro =
 Pasos:
